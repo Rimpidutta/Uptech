@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_ALTAS_URI)
+mongoose.connect(process.env.mongo_url)
 
 const connection = mongoose.connection;
 
-connection.on('connected', () =>{
-    console.log('Mongo DB connection successful');
+connection.on('connected' , () =>{
+   console.log('Mongo DB connection successful');
 })
 
-connection.on('error', (err) =>{
+connection.on('error' , (err)=>{
     console.log('Mongo DB connection failed');
 })
 
