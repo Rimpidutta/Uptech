@@ -5,11 +5,11 @@ mongoose.connect(process.env.mongo_url)
 const connection = mongoose.connection;
 
 connection.on('connected' , () =>{
-   console.log('Mongo DB connection successful');
+    console.log('Mongo DB connection Successful');
 })
 
-connection.on('error' , (err)=>{
+connection.on('error' , (err) =>{
     console.log('Mongo DB connection failed');
 })
 
-module.exports = connection;
+module.exports= connection;
